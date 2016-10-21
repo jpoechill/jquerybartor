@@ -132,8 +132,8 @@ gulp.task('serve', function (callback) {
 
 // Dist
 gulp.task('serve:dist', function(callback) {
-    runSequence('clean:dist',
-        ['useref:dist', 'sass', 'move-sw', 'images'],
+    runSequence('clean:dist', 'useref:dist', 
+        ['sass', 'move-sw', 'images'],
         'browser-sync:dist',
         callback
     );
